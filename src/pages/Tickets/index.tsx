@@ -101,6 +101,9 @@ const Tickets: React.FC = () => {
                 <Typography>
                   <b>Price: </b>${ticket.price.toFixed(2)}
                 </Typography>
+                <Typography>
+                  <b>Service Fee: </b>${ticket.serviceFee.toFixed(2)}
+                </Typography>
                 <fieldset className={classes.noteRoot}>
                   <legend><b>Notes From Seller</b></legend>
                   <Typography>

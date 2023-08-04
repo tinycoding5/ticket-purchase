@@ -5,7 +5,5 @@ export const Root = styled('footer')(({ theme }) => ({
   color: theme.palette.common.black,
   padding: theme.spacing(3, 0),
   borderTop: `1px solid ${theme.palette.grey[600]}`,
-  position: 'fixed',
-  bottom: 0,
-  width: '100%'
+  marginTop: theme.spacing(2.5),
 }));

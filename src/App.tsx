@@ -9,7 +9,7 @@ import Tickets from './pages/Tickets';
 import Checkout from './pages/Checkout';
 
 const Body = styled(Container)(({ theme }) => ({
-  minHeight: '80vh'
+  minHeight: '75vh'
 }))
 
 function App() {

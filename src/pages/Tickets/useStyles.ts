@@ -27,6 +27,7 @@ const useStyles = makeStyles({
     borderRadius: 8,
     padding: 16,
     width: '100%',
+    height: '100%',
     border: '1px solid rgb(192, 192, 192)',
     '& .label': {
       fontWeight: 700,
