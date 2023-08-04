@@ -2,8 +2,9 @@ import React from 'react'
 import useStyles, { CardComponent } from './useStyles';
 import PageTitle from '../../components/PageTitle';
 import { Order } from './types';
-import { Card, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import { CheckCircleOutline } from '@mui/icons-material';
+import { getTimeFormat } from '../../utils';
 
 const Checkout: React.FC = () => {
   const classes = useStyles();
@@ -16,6 +17,7 @@ const Checkout: React.FC = () => {
       setOrder(newOrder)
     }
   }, [])
+
   return (
     <div className={classes.root}>
       <PageTitle title={'Checkout'} />
@@ -27,10 +29,28 @@ const Checkout: React.FC = () => {
                 <Typography>Delivery</Typography>
                 <CheckCircleOutline className={classes.iconComponent} />
               </div>
+              <h3>Mobile Entry - {order.delivery.price > 0 ? `$${order.delivery.price}` : 'Free'}</h3>
+              <Typography>
+                Tickets Available by {getTimeFormat(order.delivery.estimated)}
+              </Typography>
+              <Typography>
+                {order.delivery.description}
+              </Typography>
+            </CardComponent>
+            <CardComponent>
+              <div className={classes.titleRoot}>
+                <Typography>Payment</Typography>
+                <CheckCircleOutline className={classes.iconComponent} />
+              </div>
             </CardComponent>
           </Grid>
           <Grid item sm={5} xs={12}>
-
+            <CardComponent>
+              <div className={classes.titleRoot}>
+                <Typography>Total</Typography>
+                <div></div>
+              </div>
+            </CardComponent>
           </Grid>
         </Grid>
       ) : (
