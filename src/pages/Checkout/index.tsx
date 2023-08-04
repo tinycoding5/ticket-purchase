@@ -2,7 +2,7 @@ import React from 'react'
 import useStyles, { CardComponent } from './useStyles';
 import PageTitle from '../../components/PageTitle';
 import { Order } from './types';
-import { Button, Checkbox, FormControl, Grid, Typography } from '@mui/material';
+import { Button, Checkbox, FormControl, FormHelperText, Grid, Typography } from '@mui/material';
 import { CheckCircleOutline } from '@mui/icons-material';
 import { getTimeFormat } from '../../utils';
 import CreditCard from '../../components/CreditCard';
@@ -125,6 +125,9 @@ const Checkout: React.FC = () => {
                 </div>
                 <Button variant='contained' color='success'>Place Order</Button>
               </FormControl>
+              <FormHelperText>
+                {'*Exceptions may apply, see our Terms of Use.'}
+              </FormHelperText>
             </CardComponent>
           </Grid>
         </Grid>

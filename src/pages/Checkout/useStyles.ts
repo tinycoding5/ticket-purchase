@@ -42,7 +42,7 @@ export const CardComponent = styled('div')(({ theme }) => ({
   margin: theme.spacing(2, 0),
   borderRadius: 8,  
   '& button': {
-    marginTop: theme.spacing(1),
+    margin: theme.spacing(1, 0),
     textTransform: 'none',
   }
 }));
